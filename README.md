@@ -106,3 +106,21 @@ class Solution {
     }
 ```
 
+#### 6. 旋转数组
+
+```java
+class Solution {
+    public void rotate(int[] nums, int k) {
+       int length = nums.length;
+        // 使用新的数组
+        int[] newNums = new int[length];
+        for (int i = 0; i < length; i++) {
+            newNums[(i + k) % length] = nums[i];
+        }
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = newNums[i];
+        }
+    }
+}
+```
+
